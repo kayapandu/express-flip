@@ -5,7 +5,7 @@ const {
   http
 } = require('../../config');
 
-// const routes = require('../routes');
+const routes = require('../routes');
 const { errorHandler } = require('../utils');
 
 console.log(http);
@@ -21,6 +21,9 @@ app.get("/", (request, response) => {
       info: 'Hello world!'
   });
 })
+
+//router initialization
+routes(app);
 
 
 //router initialization
